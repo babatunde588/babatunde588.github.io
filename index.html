@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Babatunde Odulaja | Web Design, SEO &amp; GoHighLevel</title>
+<meta name="description" content="Babatunde Odulaja builds websites, funnels, GoHighLevel automations, product ads, AI videos and social content for small businesses.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+--bg: #f4f5f1;
+--surface: #ffffff;
+--ink: #12261f;
+--muted: #56655e;
+--line: #d9ddd6;
+--accent: #f5c400;
+--accent-ink: #12261f;
+--deep: #0f3b2e;
+--deep-ink: #eef3ef;
+--font-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+--font-body: "Instrument Sans", "Segoe UI", system-ui, sans-serif;
+color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+:root:not([data-theme="light"]) {
+--bg: #0d1714;
+--surface: #14221d;
+--ink: #e9efeb;
+--muted: #9fb0a8;
+--line: #26372f;
+--accent: #ffd21f;
+--accent-ink: #11201a;
+--deep: #0a2c22;
+--deep-ink: #e9efeb;
+color-scheme: dark;
+}
+}
+:root[data-theme="dark"] {
+--bg: #0d1714;
+--surface: #14221d;
+--ink: #e9efeb;
+--muted: #9fb0a8;
+--line: #26372f;
+--accent: #ffd21f;
+--accent-ink: #11201a;
+--deep: #0a2c22;
+--deep-ink: #e9efeb;
+color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 17px; line-height: 1.6; }
+h1, h2, h3 { font-family: var(--font-display); line-height: 1.05; margin: 0; text-wrap: balance; }
+p { margin: 0; }
+a { color: inherit; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+.wrap { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+nav { display: flex; justify-content: space-between; align-items: center; padding: 22px 0; gap: 16px; flex-wrap: wrap; }
+.logo { font-family: var(--font-display); font-weight: 800; font-size: 22px; text-decoration: none; display: flex; align-items: center; gap: 10px; }
+.logo span.dot { width: 14px; height: 14px; background: var(--accent); border-radius: 50%; display: inline-block; }
+nav ul { list-style: none; display: flex; gap: 26px; margin: 0; padding: 0; flex-wrap: wrap; }
+nav ul a { text-decoration: none; color: var(--muted); font-weight: 500; font-size: 15px; }
+nav ul a:hover { color: var(--ink); }
+.hero { display: grid; grid-template-columns: 1.3fr 1fr; gap: 48px; align-items: center; padding: 48px 0 72px; }
+.status { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; color: var(--muted); border: 1px solid var(--line); padding: 6px 14px; border-radius: 99px; background: var(--surface); }
+.status i { width: 8px; height: 8px; border-radius: 50%; background: #23a35a; display: inline-block; }
+.hero h1 { font-size: clamp(42px, 6.4vw, 80px); font-weight: 800; letter-spacing: -0.03em; margin: 22px 0 22px; }
+.hero h1 mark { background: linear-gradient(transparent 58%, var(--accent) 58%, var(--accent) 92%, transparent 92%); color: inherit; padding: 0 4px; }
+.hero p.lede { font-size: 20px; color: var(--muted); max-width: 34ch; }
+.cta-row { display: flex; gap: 14px; margin-top: 32px; flex-wrap: wrap; }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 24px; border-radius: 12px; font-weight: 600; text-decoration: none; font-size: 16px; border: 2px solid var(--ink); }
+.btn.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.btn.primary:hover { filter: brightness(0.95); }
+.btn.ghost:hover { background: var(--surface); }
+.hero-visual { position: relative; min-height: 380px; }
+.browser { position: absolute; inset: 0 40px 60px 0; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 24px 60px -24px rgba(15,59,46,.35); overflow: hidden; }
+.browser .bar { display: flex; gap: 6px; padding: 12px 14px; border-bottom: 1px solid var(--line); align-items: center; }
+.browser .bar i { width: 10px; height: 10px; border-radius: 50%; background: var(--line); display: inline-block; }
+.browser .bar b { margin-left: 10px; font-weight: 500; font-size: 12px; color: var(--muted); background: var(--bg); padding: 3px 12px; border-radius: 6px; }
+.browser .body { padding: 22px; display: grid; gap: 12px; }
+.sk { background: var(--bg); border-radius: 6px; height: 12px; }
+.sk.h { height: 26px; width: 70%; background: var(--deep); }
+.sk.y { height: 36px; width: 38%; background: var(--accent); border-radius: 8px; margin-top: 6px; }
+.sk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 8px; }
+.sk-grid div { height: 64px; border-radius: 8px; background: var(--bg); border: 1px solid var(--line); }
+.phone { position: absolute; right: 0; bottom: 0; width: 150px; height: 270px; background: var(--deep); border-radius: 26px; padding: 10px; box-shadow: 0 24px 50px -20px rgba(0,0,0,.45); }
+.phone .screen { background: var(--surface); height: 100%; border-radius: 18px; padding: 14px 12px; display: grid; gap: 8px; align-content: start; }
+.phone .ad { height: 110px; border-radius: 12px; background: radial-gradient(circle at 70% 30%, var(--accent) 0 26%, transparent 27%), var(--deep); }
+.seo-badge { position: absolute; left: -10px; bottom: 14px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 12px 16px; box-shadow: 0 16px 40px -18px rgba(0,0,0,.3); font-size: 13px; }
+.seo-badge strong { font-family: var(--font-display); font-size: 26px; display: block; line-height: 1; font-variant-numeric: tabular-nums; }
+.seo-badge span { color: var(--muted); }
+section { padding: 80px 0; }
+.sec-head { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 40px; flex-wrap: wrap; }
+.sec-head h2 { font-size: clamp(32px, 4.4vw, 52px); font-weight: 800; letter-spacing: -0.02em; }
+.sec-head p { color: var(--muted); max-width: 42ch; }
+.kicker { font-size: 13px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; display: block; }
+.services { display: grid; grid-template-columns: repeat(6, 1fr); gap: 18px; }
+.svc { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 12px; grid-column: span 2; }
+.svc.wide { grid-column: span 3; }
+.svc .icon { width: 44px; height: 44px; border-radius: 12px; background: var(--bg); display: grid; place-items: center; }
+.svc .icon svg { width: 22px; height: 22px; stroke: var(--ink); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.svc h3 { font-size: 23px; font-weight: 700; }
+.svc p { color: var(--muted); font-size: 16px; }
+.svc ul { margin: 4px 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+.svc li { font-size: 13px; font-weight: 500; padding: 4px 10px; border-radius: 99px; border: 1px solid var(--line); color: var(--muted); }
+.svc.featured { background: var(--deep); color: var(--deep-ink); border-color: var(--deep); }
+.svc.featured p, .svc.featured li { color: color-mix(in srgb, var(--deep-ink) 78%, transparent); }
+.svc.featured li { border-color: color-mix(in srgb, var(--deep-ink) 25%, transparent); }
+.svc.featured .icon { background: var(--accent); }
+.svc.featured .icon svg { stroke: var(--accent-ink); }
+.free-tag { align-self: flex-start; background: var(--accent); color: var(--accent-ink); font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 6px; letter-spacing: .04em; }
+.work { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.project { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column; text-decoration: none; color: inherit; transition: transform .15s ease, border-color .15s ease; }
+.project:hover { transform: translateY(-3px); border-color: var(--ink); }
+.project .shot { aspect-ratio: 16 / 10; display: grid; place-items: center; position: relative; overflow: hidden; }
+.shot.photo { background: #ffffff; }
+.shot.photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.project .meta { padding: 22px 24px 26px; display: grid; gap: 8px; }
+.project .meta .tags { font-size: 13px; color: var(--muted); font-weight: 500; }
+.project h3 { font-size: 22px; font-weight: 700; }
+.project p { color: var(--muted); font-size: 15px; }
+.project .view { font-size: 14px; font-weight: 600; margin-top: 4px; }
+.more-work { margin-top: 28px; border-top: 1px solid var(--line); padding-top: 24px; }
+.more-work h3 { font-size: 20px; font-weight: 700; margin-bottom: 14px; }
+.more-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px 24px; }
+.more-list a { color: var(--muted); text-decoration: none; font-size: 15px; }
+.more-list a:hover { color: var(--ink); text-decoration: underline; }
+.process { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-top: 2px solid var(--ink); }
+.step { padding: 26px 24px 8px 0; display: grid; gap: 10px; align-content: start; }
+.step .n { font-family: var(--font-display); font-weight: 800; font-size: 15px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.step h3 { font-size: 22px; font-weight: 700; }
+.step p { color: var(--muted); font-size: 15px; }
+.offer { background: var(--deep); color: var(--deep-ink); border-radius: 28px; padding: 56px; display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px; align-items: center; }
+.offer h2 { font-size: clamp(30px, 4vw, 48px); font-weight: 800; letter-spacing: -0.02em; }
+.offer h2 em { font-style: normal; color: var(--accent); }
+.offer p { color: color-mix(in srgb, var(--deep-ink) 78%, transparent); margin-top: 16px; max-width: 46ch; }
+.checklist { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.checklist li { display: flex; gap: 12px; align-items: flex-start; font-weight: 500; }
+.checklist li::before { content: ""; flex: none; width: 20px; height: 20px; margin-top: 3px; border-radius: 6px; background: var(--accent) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3.2 3L15 7' fill='none' stroke='%2312261f' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 16px no-repeat; }
+.about { display: grid; grid-template-columns: 280px 1fr; gap: 48px; align-items: center; background: var(--surface); border: 1px solid var(--line); border-radius: 28px; padding: 44px; }
+.avatar { width: 100%; aspect-ratio: 1; border-radius: 24px; background: var(--deep); object-fit: cover; display: block; }
+.about-text { display: grid; gap: 14px; }
+.about-text h2 { font-size: clamp(30px, 4vw, 44px); font-weight: 800; letter-spacing: -0.02em; }
+.about-text p { color: var(--muted); max-width: 62ch; }
+.facts { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 28px; margin: 10px 0 0; }
+.facts dt { font-size: 13px; color: var(--muted); font-weight: 500; }
+.facts dd { margin: 0; font-weight: 600; }
+.contact { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+.contact h2 { font-size: clamp(36px, 5vw, 64px); font-weight: 800; letter-spacing: -0.03em; }
+.contact p.lede { color: var(--muted); margin-top: 18px; font-size: 18px; max-width: 38ch; }
+.channels { display: grid; gap: 14px; }
+.channel { display: flex; justify-content: space-between; align-items: center; gap: 16px; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 14px 18px; text-decoration: none; }
+.channel:hover { border-color: var(--ink); }
+.channel small { display: block; color: var(--muted); font-size: 13px; font-weight: 500; }
+.channel strong { font-size: 16px; font-weight: 600; word-break: break-word; }
+.channel .arrow { font-size: 22px; flex: none; }
+.contact-right { display: grid; gap: 22px; }
+.cform { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 28px; display: grid; gap: 16px; }
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.field { display: grid; gap: 6px; }
+.field label { font-size: 14px; font-weight: 600; }
+.field .opt { color: var(--muted); font-weight: 400; }
+.field input, .field select, .field textarea { font: inherit; font-size: 16px; color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; width: 100%; }
+.field textarea { resize: vertical; min-height: 120px; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: 3px solid var(--accent); outline-offset: 1px; border-color: var(--ink); }
+.bad { border-color: #c2412d !important; }
+.fbtns { display: flex; gap: 12px; flex-wrap: wrap; }
+.ferr { color: #c2412d; font-weight: 600; font-size: 14px; }
+.fnote { color: var(--muted); font-size: 13px; }
+footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--muted); font-size: 14px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+@media (max-width: 900px) {
+.hero, .offer, .contact { grid-template-columns: 1fr; }
+.hero-visual { min-height: 340px; }
+.services { grid-template-columns: 1fr 1fr; }
+.svc, .svc.wide { grid-column: span 1; }
+.process, .work, .more-list { grid-template-columns: 1fr 1fr; }
+.offer { padding: 36px 28px; }
+}
+@media (max-width: 760px) { .about { grid-template-columns: 1fr; padding: 28px; } .avatar { max-width: 200px; } .facts { grid-template-columns: 1fr; } }
+@media (max-width: 560px) {
+body { font-size: 16px; }
+.wrap { padding: 0 18px; }
+nav ul { gap: 16px; }
+.services, .work, .process, .more-list, .row2 { grid-template-columns: 1fr; }
+section { padding: 56px 0; }
+.hero { padding: 24px 0 48px; }
+.browser { inset: 0 24px 50px 0; }
+.phone { width: 120px; height: 220px; }
+.seo-badge { left: 0; }
+.cform { padding: 20px; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav aria-label="Main">
+<a class="logo" href="#top"><span class="dot" aria-hidden="true"></span>Odulaja</a>
+<ul>
+<li><a href="#services">Services</a></li>
+<li><a href="#work">Work</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+<header class="hero" id="top">
+<div>
+<span class="status"><i aria-hidden="true"></i>Available for new projects · 30+ hrs/week</span>
+<h1>Websites and ads that help small businesses <mark>get found</mark> and get paid.</h1>
+<p class="lede">I'm Babatunde Odulaja, a freelance web designer and GoHighLevel specialist. I build websites, funnels, product ads, AI videos and social content for businesses that want more customers online.</p>
+<div class="cta-row">
+<a class="btn primary" href="#contact">Start a project →</a>
+<a class="btn ghost" href="#work">See my work</a>
+</div>
+</div>
+<div class="hero-visual" aria-hidden="true">
+<div class="browser">
+<div class="bar"><i></i><i></i><i></i><b>yourbusiness.com</b></div>
+<div class="body">
+<div class="sk h"></div>
+<div class="sk" style="width:88%"></div>
+<div class="sk" style="width:64%"></div>
+<div class="sk y"></div>
+<div class="sk-grid"><div></div><div></div><div></div></div>
+</div>
+</div>
+<div class="phone"><div class="screen"><div class="sk" style="width:50%"></div><div class="ad"></div><div class="sk"></div><div class="sk" style="width:70%"></div></div></div>
+<div class="seo-badge"><strong>Page 1</strong><span>on Google is the goal</span></div>
+</div>
+</header>
+</div>
+<section id="services">
+<div class="wrap">
+<div class="sec-head">
+<div><span class="kicker">What I do</span><h2>Seven ways I can help your business</h2></div>
+<p>Pick one service or combine them. Most clients start with a website and add ads or social media once it's live.</p>
+</div>
+<div class="services">
+<article class="svc featured wide">
+<div class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8h18M8 21h8M12 18v3"/></svg></div>
+<h3>Website design</h3>
+<p>A fast, mobile-friendly website that explains what you sell and makes it easy for customers to call, book or buy.</p>
+<ul><li>Business sites</li><li>Landing pages</li><li>Online stores</li></ul>
+</article>
+<article class="svc wide">
+<span class="free-tag">FREE WITH EVERY WEBSITE</span>
+<div class="icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M8 11h6M11 8v6"/></svg></div>
+<h3>SEO</h3>
+<p>On-page SEO setup so people searching for your service can find you: page titles, keywords, speed and Google Business Profile.</p>
+<ul><li>Keyword research</li><li>On-page SEO</li><li>Google Business</li></ul>
+</article>
+<article class="svc">
+<div class="icon"><svg viewBox="0 0 24 24"><path d="M4 7l8-4 8 4v10l-8 4-8-4z"/><path d="M4 7l8 4 8-4M12 11v10"/></svg></div>
+<h3>Product ad design</h3>
+<p>Scroll-stopping ad graphics for Instagram, Facebook and WhatsApp status that make your product look its best.</p>
+</article>
+<article class="svc">
+<div class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+<h3>Website mockups</h3>
+<p>See your new site before it's built. I design clear mockups so you can approve the look before any code is written.</p>
+</article>
+<article class="svc">
+<div class="icon"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="15" height="14" rx="2"/><path d="M17 10l5-3v10l-5-3z"/></svg></div>
+<h3>AI videos</h3>
+<p>Short promo videos that explain your service, made with AI tools, ready for reels, ads and your website.</p>
+</article>
+<article class="svc wide">
+<div class="icon"><svg viewBox="0 0 24 24"><path d="M4 6h6v4H4zM14 14h6v4h-6zM14 4h6v4h-6z"/><path d="M10 8h4M17 8v6M7 10v6h7"/></svg></div>
+<h3>GoHighLevel setup &amp; automation</h3>
+<p>I set up and fix GoHighLevel so every new lead is captured, followed up automatically and visible in one pipeline.</p>
+<ul><li>Workflow fixes</li><li>Pipelines</li><li>Forms &amp; calendars</li><li>Email follow-up</li></ul>
+</article>
+<article class="svc wide">
+<div class="icon"><svg viewBox="0 0 24 24"><path d="M18 8a3 3 0 1 0-3-3M6 15a3 3 0 1 0 3 3M18 22a3 3 0 1 0-3-3M8.6 16.5l6.8-3M8.6 7.5l6.8 3"/><circle cx="6" cy="6" r="3"/></svg></div>
+<h3>Social media management</h3>
+<p>I plan, design and post content on your pages every week so your business stays active and visible while you focus on running it.</p>
+<ul><li>Content calendar</li><li>Post design</li><li>Captions &amp; hashtags</li><li>Monthly report</li></ul>
+</article>
+</div>
+</div>
+</section>
+<section id="work" style="padding-top: 20px;">
+<div class="wrap">
+<div class="sec-head">
+<div><span class="kicker">Portfolio</span><h2>Websites and funnels I've built</h2></div>
+<p>Sample builds made in GoHighLevel to show how I design and automate for different industries. Click any project to see it on Upwork.</p>
+</div>
+<div class="work">
+<a class="project" href="https://www.upwork.com/freelancers/~017551ab6fa3bef38f?p=2118305451908022272" target="_blank" rel="noopener">
+<div class="shot photo"><img referrerpolicy="no-referrer" src="https://www.upwork.com/att/download/portfolio/persons/uid/2018697101056295361/profile/projects/files/bb8a91f0-7420-433b-a085-2804c5c7127d" alt="Texas Dental Services: Lead Follow-Up &amp; SMS Automation website shown on laptop and phone"></div>
+<div class="meta"><span class="tags">CRM automation · SMS · Lead generation</span><h3>Texas Dental Services: Lead Follow-Up &amp; SMS Automation</h3><p>A dental website where every new patient enquiry gets an instant text and lands in the pipeline.</p><span class="view">View project on Upwork ↗</span></div>
+</a>
+<a class="project" href="https://www.upwork.com/freelancers/~017551ab6fa3bef38f?p=2118294720290217984" target="_blank" rel="noopener">
+<div class="shot photo"><img referrerpolicy="no-referrer" src="https://www.upwork.com/att/download/portfolio/persons/uid/2018697101056295361/profile/projects/files/472ba7ee-467b-4588-811f-3a3c6cc7073b" alt="Texas Lawn Legends: CRM Setup &amp; Workflow Automation website shown on laptop and phone"></div>
+<div class="meta"><span class="tags">CRM setup · Workflow automation · Website</span><h3>Texas Lawn Legends: CRM Setup &amp; Workflow Automation</h3><p>A Dallas landscaping website with workflows that follow up with every quote request.</p><span class="view">View project on Upwork ↗</span></div>
+</a>
+<a class="project" href="https://www.upwork.com/freelancers/~017551ab6fa3bef38f?p=2042412271353069568" target="_blank" rel="noopener">
+<div class="shot photo"><img referrerpolicy="no-referrer" src="https://www.upwork.com/att/download/portfolio/persons/uid/2018697101056295361/profile/projects/files/9d232cdd-d516-4f27-ba79-27ecaba2b493" alt="Luxury Website Design &amp; Funnel UI website shown on laptop and phone"></div>
+<div class="meta"><span class="tags">Website design · Sales funnel · Email automation</span><h3>Luxury Website Design &amp; Funnel UI</h3><p>A premium brand site with a funnel that captures leads and sends follow-up emails.</p><span class="view">View project on Upwork ↗</span></div>
+</a>
+<a class="project" href="https://www.upwork.com/freelancers/~017551ab6fa3bef38f?p=2042063295856398336" target="_blank" rel="noopener">
+<div class="shot photo"><img referrerpolicy="no-referrer" src="https://www.upwork.com/att/download/portfolio/persons/uid/2018697101056295361/profile/projects/files/c2711bf0-e4b0-460b-b655-e6dd0817570e" alt="Real Estate Sales Funnel website shown on laptop and phone" loading="lazy"></div>
+<div class="meta"><span class="tags">Sales funnel · Landing page · Email automation</span><h3>Real Estate Sales Funnel</h3><p>Property lead capture with automated follow-up for agents.</p><span class="view">View project on Upwork ↗</span></div>
+</a>
+<a class="project" href="https://www.upwork.com/freelancers/~017551ab6fa3bef38f?p=2042056559266148352" target="_blank" rel="noopener">
+<div class="shot photo"><img referrerpolicy="no-referrer" src="https://www.upwork.com/att/download/portfolio/persons/uid/2018697101056295361/profile/projects/files/abeccc99-41cc-4e52-9fc2-5e6f8ac1d9c0" alt="SoleStyle Website Design website shown on laptop and phone" loading="lazy"></div>
+<div class="meta"><span class="tags">Web design · Landing page · Email marketing</span><h3>SoleStyle Website Design</h3><p>An online shoe store design with email signup built in.</p><span class="view">View project on Upwork ↗</span></div>
+</a>
+<a class="project" href="https://www.upwork.com/freelancers/~017551ab6fa3bef38f?p=2038620644306268160" target="_blank" rel="noopener">
+<div class="shot photo"><img referrerpolicy="no-referrer" src="https://www.upwork.com/att/download/portfolio/persons/uid/2018697101056295361/profile/projects/files/dee0eb18-801c-4c5f-a308-1f42634a29e5" alt="Tailor Website Design website shown on laptop and phone" loading="lazy"></div>
+<div class="meta"><span class="tags">Web design · CRM automation</span><h3>Tailor Website Design</h3><p>A bespoke tailoring site with booking and follow-up automation.</p><span class="view">View project on Upwork ↗</span></div>
+</a>
+<a class="project" href="https://www.upwork.com/freelancers/~017551ab6fa3bef38f?p=2034272957681078272" target="_blank" rel="noopener">
+<div class="shot photo"><img referrerpolicy="no-referrer" src="https://www.upwork.com/att/download/portfolio/persons/uid/2018697101056295361/profile/projects/files/3123d622-a699-408b-88e1-f85256180d00" alt="Burger Restaurant Website Design website shown on laptop and phone" loading="lazy"></div>
+<div class="meta"><span class="tags">Web design · CRM automation</span><h3>Burger Restaurant Website Design</h3><p>Menu, ordering and a signup form connected to email marketing.</p><span class="view">View project on Upwork ↗</span></div>
+</a>
+<a class="project" href="https://www.upwork.com/freelancers/~017551ab6fa3bef38f?p=2032250892350828544" target="_blank" rel="noopener">
+<div class="shot photo"><img referrerpolicy="no-referrer" src="https://www.upwork.com/att/download/portfolio/persons/uid/2018697101056295361/profile/projects/files/57ff1ef4-f952-4df5-9673-11ba58208a62" alt="Hair Boutique Sales Funnel website shown on laptop and phone" loading="lazy"></div>
+<div class="meta"><span class="tags">Sales funnel · Web form · CRM automation</span><h3>Hair Boutique Sales Funnel</h3><p>A booking funnel for a hair boutique with automatic reminders.</p><span class="view">View project on Upwork ↗</span></div>
+</a>
+<a class="project" href="https://www.upwork.com/freelancers/~017551ab6fa3bef38f?p=2031758752411246592" target="_blank" rel="noopener">
+<div class="shot photo"><img referrerpolicy="no-referrer" src="https://www.upwork.com/att/download/portfolio/persons/uid/2018697101056295361/profile/projects/files/800dae94-88fe-4153-a0be-5b62fe3e37c0" alt="Real Estate Attorney Website Design website shown on laptop and phone" loading="lazy"></div>
+<div class="meta"><span class="tags">Web design · Sales funnel · Email marketing</span><h3>Real Estate Attorney Website Design</h3><p>A law firm site that turns consultation requests into tracked leads.</p><span class="view">View project on Upwork ↗</span></div>
+</a>
+</div>
+<div class="more-work">
+<h3>More projects</h3>
+<ul class="more-list">
+<li><a href="https://www.upwork.com/freelancers/~017551ab6fa3bef38f?p=2034649855070363648" target="_blank" rel="noopener">Architecture &amp; Design Website ↗</a></li>
+<li><a href="https://www.upwork.com/freelancers/~017551ab6fa3bef38f?p=2034294765109731328" target="_blank" rel="noopener">Dealprints Website ↗</a></li>
+<li><a href="https://www.upwork.com/freelancers/~017551ab6fa3bef38f?p=2034281899308060672" target="_blank" rel="noopener">Beauty &amp; Personal Care Website ↗</a></li>
+<li><a href="https://www.upwork.com/freelancers/~017551ab6fa3bef38f?p=2038614874844442624" target="_blank" rel="noopener">Philosophy Website ↗</a></li>
+<li><a href="https://www.upwork.com/freelancers/~017551ab6fa3bef38f?p=2032246086406909952" target="_blank" rel="noopener">Appliance Repair Website ↗</a></li>
+<li><a href="https://www.upwork.com/freelancers/~017551ab6fa3bef38f?p=2032241260525957120" target="_blank" rel="noopener">Investment Advisor Website ↗</a></li>
+<li><a href="https://www.upwork.com/freelancers/~017551ab6fa3bef38f?p=2031752758755049472" target="_blank" rel="noopener">Assisted Living Facility Website ↗</a></li>
+<li><a href="https://www.upwork.com/freelancers/~017551ab6fa3bef38f?p=2031750309657890816" target="_blank" rel="noopener">Product Development Sales Funnel ↗</a></li>
+<li><a href="https://www.upwork.com/freelancers/~017551ab6fa3bef38f?p=2031740427614511104" target="_blank" rel="noopener">HVAC Repair Lead Generation Funnel ↗</a></li>
+<li><a href="https://www.upwork.com/freelancers/~017551ab6fa3bef38f?p=2031038915322109952" target="_blank" rel="noopener">Defense Attorney Lead Generation Funnel ↗</a></li>
+<li><a href="https://www.upwork.com/freelancers/~017551ab6fa3bef38f?p=2031022783872774144" target="_blank" rel="noopener">Health Products Sales Funnel ↗</a></li>
+<li><a href="https://www.upwork.com/freelancers/~017551ab6fa3bef38f?p=2031017842260574208" target="_blank" rel="noopener">Modeling Agency Website ↗</a></li>
+<li><a href="https://www.upwork.com/freelancers/~017551ab6fa3bef38f?p=2030228027420848128" target="_blank" rel="noopener">Secure Mobile Wallet Website ↗</a></li>
+<li><a href="https://www.upwork.com/freelancers/~017551ab6fa3bef38f?p=2030220013687156736" target="_blank" rel="noopener">Web Platform Sales Funnel Setup ↗</a></li>
+<li><a href="https://www.upwork.com/freelancers/~017551ab6fa3bef38f?p=2029747672837234688" target="_blank" rel="noopener">Child Education Website ↗</a></li>
+<li><a href="https://www.upwork.com/freelancers/~017551ab6fa3bef38f?p=2029726652147085312" target="_blank" rel="noopener">Eye Doctor Website ↗</a></li>
+<li><a href="https://www.upwork.com/freelancers/~017551ab6fa3bef38f?p=2029609225399357440" target="_blank" rel="noopener">Web Builder Sales Funnel Setup ↗</a></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="process" style="padding-top: 20px;">
+<div class="wrap">
+<div class="sec-head">
+<div><span class="kicker">How it works</span><h2>From first message to launch</h2></div>
+</div>
+<div class="process">
+<div class="step"><span class="n">01</span><h3>Chat</h3><p>Tell me about your business, your customers and what you need.</p></div>
+<div class="step"><span class="n">02</span><h3>Mockup</h3><p>I design a mockup so you see exactly how it will look before I build.</p></div>
+<div class="step"><span class="n">03</span><h3>Build</h3><p>I build it, set up SEO, and send you updates as I go.</p></div>
+<div class="step"><span class="n">04</span><h3>Launch</h3><p>We go live, and I show you how to update it yourself.</p></div>
+</div>
+</div>
+</section>
+<section style="padding-top: 20px;">
+<div class="wrap">
+<div class="offer">
+<div>
+<span class="kicker" style="color: var(--accent);">Current offer</span>
+<h2>Get a website with <em>free SEO setup</em> included.</h2>
+<p>Every website I build comes with SEO set up from day one, at no extra cost, so Google can find your business.</p>
+</div>
+<ul class="checklist">
+<li>Keyword research for your service and city</li>
+<li>Page titles and descriptions written for search</li>
+<li>Google Business Profile setup</li>
+<li>Speed and mobile check</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="about" style="padding-top: 20px; padding-bottom: 20px;">
+<div class="wrap">
+<div class="about">
+<img referrerpolicy="no-referrer" class="avatar" src="https://www.upwork.com/profile-portraits/c1dCZ_nKmG-TEVXIIESpc-ysFAkE0GZxmZyMaOJ_0z8p0aFckNq4rIFCoRoR_51OcA" alt="Babatunde Odulaja">
+<div class="about-text">
+<span class="kicker">About me</span>
+<h2>Hi, I'm Babatunde.</h2>
+<p>I studied Computer Science at the University of Lagos and now help small businesses get online and get organised: websites that rank, ads that sell, and GoHighLevel systems that follow up with every lead.</p>
+<p>I'm new to freelancing on Upwork, so I put extra care into every project. I test everything before I call it done and send you a short summary of what I changed.</p>
+<dl class="facts">
+<div><dt>Based in</dt><dd>Ijebu Ode, Ogun State (UTC+1)</dd></div>
+<div><dt>Education</dt><dd>BSc Computer Science, UNILAG</dd></div>
+<div><dt>Languages</dt><dd>English, Yoruba</dd></div>
+<div><dt>Certified in</dt><dd>GoHighLevel CRM &amp; Automation</dd></div>
+</dl>
+</div>
+</div>
+</div>
+</section>
+<section id="contact">
+<div class="wrap contact">
+<div>
+<span class="kicker">Contact</span>
+<h2>Let's work together.</h2>
+<p class="lede">Fill in the form and send it to me on WhatsApp or by email. I usually reply within a few hours.</p>
+<div class="channels" style="margin-top:28px;">
+<a class="channel" href="https://www.upwork.com/freelancers/~017551ab6fa3bef38f" target="_blank" rel="noopener">
+<span><small>Hire me on Upwork</small><strong>upwork.com/freelancers/~017551ab6fa3bef38f</strong></span><span class="arrow" aria-hidden="true">↗</span>
+</a>
+<a class="channel" href="mailto:odulajaba9@gmail.com">
+<span><small>Email</small><strong>odulajaba9@gmail.com</strong></span><span class="arrow" aria-hidden="true">→</span>
+</a>
+<a class="channel" href="https://wa.me/2348151388772" target="_blank" rel="noopener">
+<span><small>WhatsApp</small><strong>+234 815 138 8772</strong></span><span class="arrow" aria-hidden="true">↗</span>
+</a>
+<a class="channel" href="tel:+2348151388772">
+<span><small>Call</small><strong>+234 815 138 8772</strong></span><span class="arrow" aria-hidden="true">→</span>
+</a>
+</div>
+</div>
+<div class="contact-right">
+<form class="cform" id="cform" novalidate>
+<div class="row2">
+<div class="field"><label for="cf-name">Your name</label><input id="cf-name" name="name" type="text" autocomplete="name" required></div>
+<div class="field"><label for="cf-email">Email</label><input id="cf-email" name="email" type="email" autocomplete="email" required></div>
+</div>
+<div class="row2">
+<div class="field"><label for="cf-business">Business name <span class="opt">(optional)</span></label><input id="cf-business" name="business" type="text" autocomplete="organization"></div>
+<div class="field"><label for="cf-service">What do you need?</label>
+<select id="cf-service" name="service">
+<option>Website design</option>
+<option>SEO</option>
+<option>GoHighLevel setup &amp; automation</option>
+<option>Product ad design</option>
+<option>Website mockup</option>
+<option>AI video</option>
+<option>Social media management</option>
+<option>Not sure yet</option>
+</select>
+</div>
+</div>
+<div class="field"><label for="cf-budget">Budget <span class="opt">(optional)</span></label>
+<select id="cf-budget" name="budget">
+<option value="">Choose a range</option>
+<option>Under $100</option>
+<option>$100 – $300</option>
+<option>$300 – $700</option>
+<option>$700+</option>
+</select>
+</div>
+<div class="field"><label for="cf-message">Tell me about your project</label><textarea id="cf-message" name="message" rows="5" required></textarea></div>
+<p class="ferr" id="cf-err" role="alert" hidden>Please fill in your name, email and project details.</p>
+<div class="fbtns">
+<a class="btn primary" id="cf-wa" href="https://wa.me/2348151388772" target="_blank" rel="noopener">Send on WhatsApp</a>
+<a class="btn ghost" id="cf-mail" href="mailto:odulajaba9@gmail.com">Send by email</a>
+</div>
+<p class="fnote">Your message opens in WhatsApp or your email app, ready to send to me.</p>
+</form>
+</div>
+</div>
+</section>
+<div class="wrap">
+<footer>
+<span>© 2026 Babatunde Odulaja. Websites, SEO, GoHighLevel, ads and AI video.</span>
+<a href="#top">Back to top ↑</a>
+</footer>
+</div>
+<script>
+(function(){
+var f=document.getElementById('cform'), wa=document.getElementById('cf-wa'), mail=document.getElementById('cf-mail'), err=document.getElementById('cf-err');
+function v(id){return document.getElementById(id).value.trim();}
+function text(){
+var lines=['Hi Babatunde, I found you through your portfolio.','','Name: '+v('cf-name'),'Email: '+v('cf-email')];
+if(v('cf-business')) lines.push('Business: '+v('cf-business'));
+lines.push('Service: '+v('cf-service'));
+if(v('cf-budget')) lines.push('Budget: '+v('cf-budget'));
+lines.push('','Project: '+v('cf-message'));
+return lines.join('\n');
+}
+function update(){
+var t=encodeURIComponent(text());
+wa.href='https://wa.me/2348151388772?text='+t;
+mail.href='mailto:odulajaba9@gmail.com?subject='+encodeURIComponent('Project enquiry: '+v('cf-service'))+'&body='+t;
+}
+function valid(){
+var ok=true;
+['cf-name','cf-email','cf-message'].forEach(function(id){
+var el=document.getElementById(id), good=el.value.trim()!=='' && (id!=='cf-email' || /.+@.+\..+/.test(el.value));
+el.classList.toggle('bad',!good); if(!good) ok=false;
+});
+err.hidden=ok; return ok;
+}
+f.addEventListener('input',update);
+f.addEventListener('change',update);
+f.addEventListener('submit',function(e){e.preventDefault();});
+[wa,mail].forEach(function(a){a.addEventListener('click',function(e){ if(!valid()){e.preventDefault(); return;} update(); });});
+update();
+})();
+</script>
+</body>
+</html>
